@@ -33,27 +33,29 @@ const Blog = () => {
 
   return (
     <div className="container">
-      <section className="categoriesSection">
+      <section className="categorieSection ">
         <h2 className="categoriesTitle">Categories</h2>
         <ul className="categoriesList">
           {categories.map((category) => (
             <li key={category.id} className="categoryItem">
-              <Link href={`/blog?category=${category.slug}`}>
-                <Link className="categoryLink">{category.name}</Link>
+              <Link href={`/single-blog`}>
+                <p className="categoryLink">{category.name}</p>
               </Link>
             </li>
           ))}
         </ul>
       </section>
-      <section className="blogSection">
+      <section className="blogsSection">
         <h2 className="blogTitle">Latest Blog Posts</h2>
         <div className="blogItems">
           {blogItems.map((item) => (
+            <Link href={`/single-blog/${item.id}`} key={item.id}>
             <div key={item.id} className="blogItem">
               <h3 className="blogItemTitle">{item.title}</h3>
               <p className="blogItemDate">Created: {item.created_at}</p>
               <p className="blogItemDate">Updated: {item.updated_at}</p>
             </div>
+            </Link>
           ))}
         </div>
       </section>

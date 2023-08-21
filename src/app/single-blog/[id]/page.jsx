@@ -26,7 +26,7 @@ const SingleBlog = () => {
     fetchData();
   }, []);
 
-  const { title, created_at, updated_at, content, img } = blogItem.postDetails; // Destructure the properties
+  const { title, created_at, updated_at, content, img } = blogItem.postDetails;
 
   return (
     <div className="container">
@@ -42,8 +42,8 @@ const SingleBlog = () => {
               <Image
                 src={img} 
                 alt="Blog Image"
-                width={500} // Set your desired width
-                height={300} // Set your desired height
+                width={500}
+                height={300}
               />
             </div>
           )}

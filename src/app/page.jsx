@@ -74,7 +74,7 @@ const Home = () => {
                         <form className='newsletterForm'>
                             <input
                                 type='email'
-                                placeholder='Your Email'
+                                placeholder='Subscribe for newsletter'
                                 className='inputField'
                             />
                             <button className='subscribeButton animatedButton'>
