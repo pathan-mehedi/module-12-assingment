@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
+import Link from "next/link";
 
 const Home = () => {
     const [blogItems, setBlogItems] = useState([]);
@@ -55,11 +56,11 @@ const Home = () => {
                     <div className='blogItems'>
                         {blogItems.map((item) => (
                             <div key={item.id} className='blogItem'>
-                                <a href='/single-blog'>
+                                <Link href='/single-blog'>
                                     <h3 className='blogItemTitle'>
                                         {item.name}
                                     </h3>
-                                </a>
+                                </Link>
                             </div>
                         ))}
                     </div>

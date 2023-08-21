@@ -258,11 +258,13 @@ a {
   .newsletterForm {
     flex-direction: column;
   }
+
   .inputField {
     width: 200px;
     margin-bottom: 20px;
   }
 }
+
 .inputField {
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -285,8 +287,6 @@ a {
 .subscribeButton:hover {
   background-color: #247d3c;
 }
-
-
 
 /* BLOG PAGE STYLE */
 .blog-container {
@@ -374,6 +374,7 @@ a {
   margin: 7rem auto;
   padding: 4rem 0;
 }
+
 .categorieSection {
   width: 100%;
   padding: 4rem 0 0 0;
@@ -404,9 +405,10 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
+
 .blogsSection {
   margin: auto;
-  padding: 7rem 0 3rem 0 ;
+  padding: 7rem 0 3rem 0;
 }
 
 .blogItem {
@@ -511,7 +513,7 @@ a {
 
 
 .about-section {
-  margin: 4rem 0;  
+  margin: 4rem 0;
   background-color: #f9f9f9;
   padding: 20px;
   margin-bottom: 30px;

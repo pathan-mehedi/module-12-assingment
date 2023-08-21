@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Image from "next/image";
 
 const SingleBlog = () => {
     const [blogItems, setBlogItems] = useState([]);
