@@ -1,5 +1,14 @@
 /* HEADER COMPONENTS STYLE */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
 .header {
     background-color: #f3f7fb;
     color: white;
@@ -31,7 +40,7 @@
     padding: 5px;
     z-index: 100;
     position: absolute;
-    top: 10px;
+    top: 33%;
     right: 10px;
     display: none;
   }
@@ -64,7 +73,7 @@
   
   .navLinks li {
     font-size: 1rem;
-    margin-bottom: 10px;
+    
   }
   
   .navLinks .menu_link {
@@ -78,6 +87,18 @@
   }
   
   @media (max-width: 768px) {
+    .featuredSection {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
+    .featuredContent{
+      max-width: 100%!important;
+      padding: 0 5px;
+    }
+    .featuredImage {
+      max-width: 80%!important;
+      margin-top: 50px;
+    }
     .nav {
       flex-direction: column;
       align-items: flex-start;
@@ -129,6 +150,8 @@
     }
     
     .featuredButton {
+      display: inline-block;
+      text-decoration: none;
       background-color: #329c4b;
       color: white;
       border: none;
@@ -188,23 +211,33 @@
     }
     
     .blogItemDate {
-      font-size: 1rem;
+      font-size: 13px;
       color: #666;
     }
     
     
-    .anotherSection {
+    .newsLetterSection {
       background-color: #f7f7f7;
+      border-radius: 25px;
+      margin-bottom: 60px;
       padding: 4rem 0;
     }
+
+    .newsLetterContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     
-    .anotherTitle {
+    .newsLetterTitle {
       font-size: 2rem;
       margin-bottom: 2rem;
       color: #333;
     }
     
-    .anotherText {
+    .newsLetterText {
+      text-align: center;
       font-size: 1.2rem;
       margin-bottom: 2rem;
       color: #666;

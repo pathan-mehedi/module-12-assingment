@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import axios from "axios";
 
 const Home = () => {
     const [blogItems, setBlogItems] = useState([]);
@@ -10,14 +10,14 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                "use server";
+                ("use server");
                 const response = await axios.get(
-                    'https://basic-blog.teamrabbil.com/api/post-list/2'
+                    "https://basic-blog.teamrabbil.com/api/post-categories"
                 );
                 setBlogItems(response.data);
-                console.log('API Response:', response.data);
+                console.log("API Response:", response.data);
             } catch (error) {
-                console.error('Error fetching blog items:', error);
+                console.error("Error fetching blog items:", error);
             }
         };
 
@@ -34,9 +34,11 @@ const Home = () => {
                             Explore our latest blog posts and stay updated with
                             the latest trends.
                         </p>
-                        <button className='featuredButton animatedButton'>
-                            Explore
-                        </button>
+                        <a
+                            href='/blog'
+                            className='featuredButton animatedButton'>
+                            Explore Now
+                        </a>
                     </div>
                     <div className='featuredImage'>
                         <Image
@@ -53,21 +55,19 @@ const Home = () => {
                     <div className='blogItems'>
                         {blogItems.map((item) => (
                             <div key={item.id} className='blogItem'>
-                                <h3 className='blogItemTitle'>{item.name}</h3>
-                                <p className='blogItemDate'>
-                                    Created: {item.created_at}
-                                </p>
-                                <p className='blogItemDate'>
-                                    Updated: {item.updated_at}
-                                </p>
+                                <a href='/single-blog'>
+                                    <h3 className='blogItemTitle'>
+                                        {item.name}
+                                    </h3>
+                                </a>
                             </div>
                         ))}
                     </div>
                 </section>
-                <section className='anotherSection'>
-                    <div className='anotherContent'>
-                        <h2 className='anotherTitle'>Stay Informed</h2>
-                        <p className='anotherText'>
+                <section className='newsLetterSection'>
+                    <div className='newsLetterContent'>
+                        <h2 className='newsLetterTitle'>Stay Informed</h2>
+                        <p className='newsLetterText'>
                             Sign up for our newsletter to receive the latest
                             updates and blog posts directly in your inbox.
                         </p>
